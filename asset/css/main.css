@@ -36,7 +36,7 @@ p{
 
 .header{
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 9999;
@@ -76,7 +76,7 @@ p{
 .logo-2{
     width: 200px;
     height: 150px;
-    float: left;
+    float: right;
 }
 .logo-2 img{
     width: 100%;
@@ -337,6 +337,11 @@ section#jingle .container{
     padding-top: 150px;
     padding-bottom: 300px;
 }
+#mechanism .container{
+    max-width: 100% !important;
+    padding-left: 50px;
+    padding-right: 50px;
+}
 
 #mechanism .vbg{
     z-index: 3;
@@ -354,16 +359,30 @@ section#jingle .container{
 
 .m-card{
     width: 100%;
-    background: url(../images/card-bg-1.png) no-repeat center;
+    /*background: url(../images/card-bg-1.png) no-repeat center;
     background-size: contain;
+    background: var(--pink);
+    border: 10px solid #fff;
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;*/
     padding: 40px 40px;
     position: relative;
+}
+.m-card img.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
 .m-card .num{
     font-size: 48px;
     position: absolute;
     top: 30px;
-    left: 30px;
+    left: 40px;
     color: #fff;
 }
 .m-card .m-icon{
@@ -372,11 +391,14 @@ section#jingle .container{
     margin: 40px auto 0;
 }
 .m-card p{
-    font-size: 24px;
+    font-size: 22px;
     font-family: var(--boo);
     color: #fff;
     line-height: 120%;
     margin-bottom: 20px;
+}
+.m-card p strong{
+    color: var(--yellow);
 }
 .m-card::after{
     content: "";
@@ -501,6 +523,11 @@ section#jingle .container{
     padding-bottom: 300px;
 }
 
+#prize .pic img{
+    width: 80%;
+    margin-left: 10%;
+}
+
 #prize .columns:nth-child(3){
     margin-top: -400px;
 }
@@ -527,7 +554,11 @@ section#jingle .container{
 }
 */
 #socmed{
-    height: 100vh;
+    height: auto;
+}
+#socmed .soc{
+    position: relative;
+    z-index: 7;
 }
 .socmed-grid{
     width: 100%;
@@ -648,7 +679,160 @@ section#jingle .container{
     -webkit-transition: all ease-out 0.5s;
 }
 
+.m-nav{
+    position: fixed;
+    bottom: 80px;
+    right: 60px;
+    z-index: 99;
+}
+.burger{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    z-index: 3;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transform: translate(-50%,-50%) scale(0);
+    -moz-transform: translate(-50%,-50%) scale(0);
+    -webkit-transform: translate(-50%,-50%) scale(0);
+    transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+}
+.master.scrolled .burger{
+    transform: translate(-50%,-50%) scale(1);
+    -moz-transform: translate(-50%,-50%) scale(1);
+    -webkit-transform: translate(-50%,-50%) scale(1);
+}
+.burger:hover{
+    transform: translate(-50%,-50%) scale(1.2);
+    -moz-transform: translate(-50%,-50%) scale(1.2);
+    -webkit-transform: translate(-50%,-50%) scale(1.2);
+}
+.burger span{
+    width: 40px;
+    height: 8px;
+    background: var(--green);
+    position: absolute;
+    left: 50%;
+
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+}
+.burger span:nth-child(1){
+    top: 35%;
+}
+.burger span:nth-child(2){
+    top: 50%;
+}
+.burger span:nth-child(3){
+    top: 65%;
+}
+.m-nav.active .burger{
+    transform: translate(-50%,-50%) rotate(180deg);
+    -moz-transform: translate(-50%,-50%) rotate(180deg);
+    -webkit-transform: translate(-50%,-50%) rotate(180deg);
+}
+.m-nav.active .burger span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    -moz-transform: translate(-50%,-50%) rotate(45deg);
+    -webkit-transform: translate(-50%,-50%) rotate(45deg);
+}
+.m-nav.active .burger span:nth-child(2){
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    -moz-transform: translate(-50%,-50%) rotate(-45deg);
+    -webkit-transform: translate(-50%,-50%) rotate(-45deg);
+}
+.m-nav.active .burger span:nth-child(3){
+    display: none;
+}
+
+.m-nav .pops{
+    width: 80px;
+    overflow: hidden;
+    padding: 0;
+    height: 80px;
+    transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    opacity: 0;
+}
+.m-nav.active .pops{
+    opacity: 1;
+    width: 240px;
+    padding: 30px 30px 110px 30px;
+    height: 550px;
+    bottom: 0;
+    right: 0;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+.m-nav .pops .img-bg{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.m-nav .main-menu{
+    width: 100%;
+    text-align: right;
+}
+.m-nav .main-menu li{
+    display: block;
+    width: 100%;
+}
+.m-nav .main-menu li a{
+    padding: 15px 20px;
+}
+@media only screen and (min-width: 1600px){
+    .container{
+        max-width: 1650px;
+    }
+
+    .social-media-group{
+        padding-right: 60px;
+    }
+    section#home .text h1{
+        margin-bottom: 20px;
+    }
+    section#home .text p, 
+    section#about p,
+    #tnc p{
+        font-size: 18px;
+    }
+}
+
 @media only screen and (max-width: 1600px){
+    .container{
+        max-width: 1200px;
+    }
     section#jingle .vbg{
         top: -112px;
     }
@@ -664,6 +848,11 @@ section#jingle .container{
     }
     #jingle .btn-download{
         top: 92%;
+    }
+
+    #prize .pic img{
+        width: 100%;
+        margin-left: 0;
     }
 }
 
@@ -689,6 +878,9 @@ section#jingle .container{
     #mechanism .pic-1{
         top: 22vh;
     }
+    .m-card p{
+        font-size: 18px;
+    }
     #prize .pic-1{
         top: 57vh;
     }
@@ -697,7 +889,7 @@ section#jingle .container{
     }
     .socmed-grid{
         width: 100vw;
-        margin-left: calc((100vw - 1200px) * -0.5);
+        
         float: left;
     }
     .footer .vbg{
@@ -736,9 +928,6 @@ section#jingle .container{
     .m-card p{
         font-size: 20px;
     }
-    .socmed-grid{
-        margin-left: calc((100vw - 1152px) * -0.5);
-    }
     #prize .pic-1{
         top: 68vh;
     }
@@ -760,12 +949,19 @@ section#jingle .container{
     #prize .pic-1{
         top: 57vh;
     }
+    .footer{
+        margin-top: 300px;
+    }
     .footer .vbg{
         top: -27vh;
     }
 }
 
 @media only screen and (max-width: 1024px){
+    .container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .logo-1{
         width: 100px;
         margin-right: 50px;
@@ -861,11 +1057,8 @@ section#jingle .container{
         padding-bottom: 200px;
     }
 
-    .socmed-grid{
-        margin-left: calc((100vw - 960px) * -0.5);
-    }
     .footer{
-        margin-top: 275px;
+        margin-top: 100px;
     }
     .footer .vbg{
         top: -16vh;
@@ -964,10 +1157,13 @@ section#jingle .container{
     #mechanism{
         padding-top: 100px;
     }
+    #mechanism .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
     .m-card{
         float: left;
         margin-bottom: 30px;
-        height: 250px;
     }
     .m-card .m-icon{
         width: 100px;
@@ -975,7 +1171,7 @@ section#jingle .container{
     }
     .m-card p{
         font-size: 20px;
-        width: 160px;
+        width: 100%;
         margin: auto;
     }
     .m-card .num{
@@ -1039,6 +1235,26 @@ section#jingle .container{
     #prize .column:nth-child(3) .circle-card{
         top: 72vh;
     }
+    
+    .burger{
+        transform: translate(-50%,-50%) scale(1);
+        -moz-transform: translate(-50%,-50%) scale(1);
+        -webkit-transform: translate(-50%,-50%) scale(1);
+    }
+    .m-nav{
+        right: 20px;
+        bottom: 20px;
+    }
+    .m-nav .main-menu{
+        display: block;
+    }
+    .m-nav .main-menu li{
+        font-size: 18px;
+    }
+    section#about p{
+        z-index: 4;
+        position: relative;
+    }
 }
 
 @media only screen and (max-height: 720px){
@@ -1052,6 +1268,7 @@ section#jingle .container{
     #about .vbg{
         top: 53vh;
     }
+   
 
 }
 
