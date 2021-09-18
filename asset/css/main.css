@@ -251,14 +251,9 @@ section#jingle .container{
     z-index: 3;
 }
 #jingle .pic-2{
-    width: 360px;
-    height: 151px;
     position: absolute;
-    left: -168px;
+    left: 0;
     top: 0;
-    transform: rotate(-14.5deg); 
-    -moz-transform: rotate(-14.5deg);
-    -webkit-transform: rotate(-14.5deg);
 }
 #jingle .pic-2 img{
     width: 100%;
@@ -317,14 +312,9 @@ section#jingle .container{
 }
 
 #about .pic-1{
-    width: 367px;
-    height: 155px;
     position: absolute;
-    right: -180px;
-    top: 30%;
-    transform: rotate(-9.5deg);
-    -moz-transform: rotate(-9.5deg);
-    -webkit-transform: rotate(-9.5deg);
+    right: 0;
+    top: 65%;
     z-index: 2;
 }
 #about .pic-1 img{
@@ -436,10 +426,8 @@ section#jingle .container{
 }
 #tnc .pic-1{
     position: absolute;
-    width: 360px;
-    height: 151px;
-    left: -168px;
-    top: 45%;
+    left: 0;
+    top: 150%;
     transform: rotate(-14.5deg);
     -moz-transform: rotate(-14.5deg);
     -webkit-transform: rotate(-14.5deg);
@@ -656,15 +644,10 @@ section#jingle .container{
     object-fit: contain;
 }
 #prize .pic-2{
-    width: 569px;
-    height: 240px;
     position: absolute;
-    left: 100%;
-    top: 10vh;
+    right: 0;
+    top: 140vh;
     z-index: 7;
-    transform: translateX(-50%) rotate(-3.58deg);
-    -moz-transform: translateX(-50%) rotate(-3.58deg);
-    -webkit-transform: translateX(-50%) rotate(-3.58deg);
 }
 
 #socmed .pic-1{
