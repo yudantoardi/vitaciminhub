@@ -11,6 +11,8 @@
 
 html{
     background: var(--yellow);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 *{
@@ -29,9 +31,11 @@ p{
 }
 
 .master{
+    width: 100%;
+    float: left;
+    position: relative;
     background: var(--yellow);
     padding-top: 190px;
-    overflow-x: hidden;
 }
 
 .header{
@@ -39,7 +43,7 @@ p{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 99;
     background: none;
 }
 
@@ -171,6 +175,9 @@ section#home .white-circle{
     color: rgba(0,0,0,0.8);
     z-index: 3;
     position: relative;
+    border: none;
+    font-family: var(--boo);
+    cursor: pointer;
 }
 .btn i.fa{
     margin-left: 10px;
@@ -862,6 +869,82 @@ section.static .vbg img{
     position: absolute;
 }
 
+.contact-form{
+    width: 100%;
+    float: left;
+    padding: 80px;
+    background: var(--green);
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+}
+.contact-form .inp-group{
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+.contact-form .inp-group input,
+.contact-form .inp-group textarea{
+    width: 100%;
+    font-size: 18px;
+    font-family: var(--merri);
+    padding: 18px 30px;
+    border: 1px solid #dedede;
+    border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all ease-out 0.5s;
+    -moz-transition: all ease-out 0.5s;
+    -webkit-transition: all ease-out 0.5s;
+}
+.overlay.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.overlay form{
+    width: calc(100% - 40px);
+    max-width: 600px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.overlay form h3{
+    font-size: 32px;
+    color: var(--green);
+    margin-bottom: 30px;
+    width: 100%;
+}
+.overlay form button.btn{
+    font-size: 20px;
+}
+.overlay form button.btn-2{
+    padding: 10px 40px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    font-family: var(--boo);
+    color: var(--green);
+    cursor: pointer;
+}
+.overlay form button.btn-2:hover{
+    color: var(--purple);
+}
+
 @media only screen and (min-width: 1600px){
     .container{
         max-width: 1650px;
@@ -1390,6 +1473,31 @@ section.static .vbg img{
         width: 100px;
         left: -10%;
         top: 130vh;
+    }
+    .social-media-group{
+        padding-right: 0;
+    }
+    .static .pic-1{
+        width: 150px;
+        top: -15vh;
+        left: -10%;
+    }
+    .static .pic-2{
+        width: 150px;
+        top: -30vh;
+        right: -14%;
+    }
+    .contact-form{
+        padding: 40px 30px;
+        border-radius: 20px;
+        -moz-border-radius: 20px;
+        -webkit-border-radius: 20px;
+    }
+    .contact-form .inp-group input,
+    .contact-form .inp-group textarea{
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
     }
 }
 

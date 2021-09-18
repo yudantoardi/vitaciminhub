@@ -343,6 +343,25 @@
 
             <div class="vbg"><img src="asset/images/footer.svg" alt=""></div>
         </section>
+
+        <div class="overlay">
+            <form action="" class="contact-form">
+                <h3 class="has-text-centered">Isilah form dibawah ini!</h3>
+                <div class="inp-group">
+                    <input type="text" placeholder="Nama">
+                </div>
+                <div class="inp-group">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="inp-group">
+                    <input type="text" placeholder="Nomor Telepon">
+                </div>
+                <div class="inp-group has-text-centered">
+                    <button class="btn">SUBMIT & DOWNLOAD <i class="fa fa-arrow-right"></i></button>
+                    <button class="btn-2 btn-close">CANCEL</button>
+                </div>
+            </form>
+        </div>
         
     </div>
 
@@ -370,6 +389,17 @@
                 $(".main-menu li a").removeClass("active");
                 $(this).addClass("active")
             });
+
+            $(".btn-download").click(function(d){
+                d.preventDefault();
+                $(".overlay").addClass("show");
+            });
+            $(".btn-close").click(function(c){
+                c.preventDefault();
+                $(".overlay").removeClass("show");
+            });
+
+
         });
 
     </script>
