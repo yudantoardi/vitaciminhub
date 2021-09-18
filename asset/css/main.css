@@ -617,6 +617,7 @@ section#jingle .container{
 
 .social-media-group{
     margin-bottom: 30px;
+    padding-right: 60px;
 }
 .social-media-group li{
     display: inline-block;
@@ -816,9 +817,6 @@ section#jingle .container{
         max-width: 1650px;
     }
 
-    .social-media-group{
-        padding-right: 60px;
-    }
     section#home .text h1{
         margin-bottom: 20px;
     }
@@ -1236,6 +1234,14 @@ section#jingle .container{
     .footer{
         padding-left: 0;
         padding-right: 0;
+        padding-bottom: 140px;
+        margin-top: 200px;
+    }
+    .sitemap li{
+        width: 100%;
+    }
+    .sitemap li a{
+        padding: 15px 0;
     }
 
     .footer .has-text-right,
