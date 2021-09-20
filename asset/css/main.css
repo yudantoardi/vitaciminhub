@@ -6,7 +6,7 @@
     --green: #23862E;
     --purple: #74499A;
     --pink: #FF6A60;
-    --txtborder5px: 5px 5px #fff, 0 5px #fff, -5px 5px #fff, -5px -5px #fff, 5px -5px #fff, 0 -5px #fff, 0 8px 24px rgba(0,0,0,0.25);
+    --txtborder5px: 2px 2px #fff, 0 2px #fff, -2px 2px #fff, -2px -2px #fff, 2px -2px #fff, 0 -2px #fff, 0 4px 16px rgba(0,0,0,0.25);
   }
 
 html{
@@ -1451,8 +1451,9 @@ section.static .vbg img{
         height: 500px;
     }
     .page-cover h1{
-        font-size: 56px;
-        top: 25vh;
+        font-size: 36px;
+        top: 35vh;
+        margin-left: -12px;
     }
 
     #jingle .pic-1{
