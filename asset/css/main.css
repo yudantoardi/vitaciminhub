@@ -944,6 +944,16 @@ section.static .vbg img{
     color: var(--purple);
 }
 
+.static.prize{
+    padding-top: 100px;
+}
+.static.prize .column:nth-child(3n - 1){
+    margin-top: -100px;
+}
+.static.prize img{
+    display: inline-block;
+}
+
 @media only screen and (min-width: 1600px){
     .container{
         max-width: 1650px;
@@ -1503,6 +1513,13 @@ section.static .vbg img{
         border-radius: 8px;
         -moz-border-radius: 8px;
         -webkit-border-radius: 8px;
+    }
+
+    .static.prize{
+        padding-top: 0;
+    }
+    .static.prize .column:nth-child(3n - 1){
+        margin-top: 0;
     }
 }
 
