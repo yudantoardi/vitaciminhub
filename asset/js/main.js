@@ -35,5 +35,15 @@ $(document).ready(function(){
         $(".overlay").removeClass("show");
     });
 
+    var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+
+    $('.popup').on(supportsTouch ? 'touchend' : 'click', function (event) {
+        event.stopPropagation();
+    });
+
+    $(document).on(supportsTouch ? 'touchend' : 'click', function (event) {
+        $(".overlay").removeClass("show");
+    });
+
 
 });
