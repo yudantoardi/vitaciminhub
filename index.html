@@ -344,7 +344,7 @@
             <div class="vbg"><img src="asset/images/footer.svg" alt=""></div>
         </section>
 
-        <div class="overlay">
+        <div id="form-1" class="overlay">
             <form action="" class="contact-form">
                 <h3 class="has-text-centered">Isilah form dibawah ini!</h3>
                 <div class="inp-group">
@@ -363,7 +363,7 @@
             </form>
         </div>
 
-        <div class="overlay show">
+        <div id="popup-1" class="overlay show">
 
             <div class="popup">
                 <div class="bt-close">
@@ -409,11 +409,11 @@
 
             $(".btn-download").click(function(d){
                 d.preventDefault();
-                $(".overlay").addClass("show");
+                $("#form-1").addClass("show");
             });
             $(".btn-close").click(function(c){
                 c.preventDefault();
-                $(".overlay").removeClass("show");
+                $("#form-1").removeClass("show");
             });
 
 

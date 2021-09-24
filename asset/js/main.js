@@ -32,7 +32,7 @@ $(document).ready(function(){
 
     //POPUP CLOSE
     $(".bt-close").click(function(){
-        $(".overlay").removeClass("show");
+        $("#popup-1").removeClass("show");
     });
 
     var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
@@ -42,7 +42,7 @@ $(document).ready(function(){
     });
 
     $(document).on(supportsTouch ? 'touchend' : 'click', function (event) {
-        $(".overlay").removeClass("show");
+        $("#popup-1").removeClass("show");
     });
 
 
