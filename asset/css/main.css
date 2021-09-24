@@ -404,10 +404,12 @@ section#jingle .container{
     object-fit: fill;
 }
 .m-card .num{
-    font-size: 48px;
-    position: absolute;
+    font-size: 64px;
+    /*position: absolute;
     top: 30px;
-    left: 40px;
+    left: 40px;*/
+    text-align: center;
+    width: 100%;
     color: #fff;
 }
 .m-card .m-icon{
@@ -1270,10 +1272,10 @@ section.static .vbg img{
         font-size: 18px;
         margin-bottom: 0;
     }
-    .m-card .num{
+    /*.m-card .num{
         font-size: 32px;
         top: 10px;
-    }
+    }*/
     .m-card::after{
         width: 60px;
         left: 104%;
@@ -1427,10 +1429,10 @@ section.static .vbg img{
         width: 100%;
         margin: auto;
     }
-    .m-card .num{
+    /*.m-card .num{
         left: 25%;
         top: 30px;
-    }
+    }*/
     .m-card::after{
         top: 100%;
         transform: translateX(-40px) rotate(90deg);
