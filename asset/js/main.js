@@ -30,5 +30,10 @@ $(document).ready(function(){
         }
     });
 
+    //POPUP CLOSE
+    $(".bt-close").click(function(){
+        $(".overlay").removeClass("show");
+    });
+
 
 });
